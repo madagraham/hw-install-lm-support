@@ -22,6 +22,11 @@ index = VectorstoreIndexCreator().from_loaders([loader])
 
 # user question
 query = input("What is your installation question: ")
-index.query_with_sources(query)
 
-print(f"The answer to your question is: {index.query_with_sources(query)}")
+# query for response
+index.query_with_sources(query)
+response = index.query_with_sources(query)
+
+# answer for user (source and question excluded)
+answer = response['answer']
+print(f"The answer to your question is: {answer}")
