@@ -1,6 +1,5 @@
 import os
 import openai
-import PyPDF2
 
 from langchain.document_loaders import TextLoader
 from dotenv import find_dotenv, load_dotenv
